@@ -175,6 +175,15 @@
   footer .brand { font-size: 1.15rem; }
   footer a { color: var(--peach); }
 
+  /* Small "try the new version" button, top left */
+  .try-new { background: var(--green); border-bottom: 1px solid #2E5640; }
+  .try-new .wrap { padding-top: 12px; padding-bottom: 2px; }
+  .try-new a {
+    display: inline-block; font-size: .82rem; font-weight: 600; color: var(--green);
+    background: var(--peach); text-decoration: none; padding: 5px 12px; border-radius: 999px;
+  }
+  .try-new a:hover { background: var(--cream); }
+
   @media (max-width: 600px) {
     section { padding: 60px 0; }
     .hero { padding: 52px 0 72px; }
@@ -187,6 +196,11 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+
+<!-- Small button to try the new version. Delete this block to remove it. -->
+<div class="try-new">
+  <div class="wrap"><a href="inspiration.html">Try the new version of this site</a></div>
+</div>
 
 <header class="site-header">
   <div class="wrap">
