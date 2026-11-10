@@ -41,9 +41,10 @@ The easiest way, in the browser:
 3. To add photos: open the `images` folder, click **Add file > Upload files**, drag the photos in, then click **Commit changes**.
 
 ## Ideas preview (`inspiration.html`)
-A second version of the page showing upgrade ideas: a quote form, FAQ, customer quotes, a sharing preview
+A second version of the page with a more premium, photo-led design and upgrade ideas: a quote form, FAQ, customer quotes, a sharing preview
 picture (`images/share.png`), better Google details and a booked-out switch. The customer quotes and FAQ answers
-are examples only. All its settings (business name, form address, booked-out switch) are in one block at the top.
+are examples only. Its photo spaces are images/hero.jpg, thank-you.jpg, good-year.jpg, big-cheers.jpg and
+packing.jpg (hands packing a box). All its settings (business name, form address, booked-out switch) are in one block at the top.
 
 To make it the real homepage: replace the example quotes and FAQ answers with real ones, delete the preview
 banner block and the `noindex` line, then rename it to `index.html` (replacing the old one).

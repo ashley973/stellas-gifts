@@ -28,6 +28,7 @@
      Remove the next line if this page becomes the real homepage. -->
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://ashley973.github.io/stellas-gifts/">
+<meta name="theme-color" content="#1F3D2B">
 
 <!-- Sharing preview: what shows when the link is pasted into LinkedIn, Facebook, Teams, Messenger -->
 <meta property="og:type" content="website">
@@ -56,240 +57,258 @@
   "address": {"@type": "PostalAddress", "addressLocality": "Whangārei", "addressRegion": "Northland", "addressCountry": "NZ"}
 }
 </script>
-<meta name="theme-color" content="#1F3D2B">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --green: #1F3D2B;
+    --green-2: #2A4F39;
     --red: #C8323C;
     --red-dark: #A82830;
     --peach: #F2A07B;
+    --peach-soft: #F8D9C6;
     --cream: #F6F1E7;
-    --white: #FFFDF9;
+    --paper: #FBF8F2;
     --ink: #1F2A23;
-    --muted: #4E5A52;
-    --line: #E3DACB;
-    --radius: 14px;
-    --wrap: 1080px;
+    --muted: #56625A;
+    --line: #E2D8C6;
+    --serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --wrap: 1200px;
   }
   *, *::before, *::after { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  body {
-    margin: 0;
-    background: var(--cream);
-    color: var(--ink);
-    font: 400 1.0625rem/1.65 "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  }
-  h1, h2, h3 {
-    font-family: "Fraunces", Georgia, serif;
-    font-weight: 600;
-    line-height: 1.15;
-    color: var(--green);
-    margin: 0 0 .5em;
-  }
-  h1 { font-size: clamp(2.5rem, 7vw, 4.25rem); letter-spacing: -.01em; }
-  h2 { font-size: clamp(1.85rem, 4.5vw, 2.6rem); }
-  h3 { font-size: 1.4rem; }
-  p { margin: 0 0 1em; }
-  a { color: var(--red); }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.65 var(--sans); }
   img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 500; color: var(--green); line-height: 1.08; margin: 0 0 .5em; letter-spacing: -.01em; }
+  h1 { font-size: clamp(2.8rem, 6.4vw, 5.4rem); }
+  h2 { font-size: clamp(2rem, 4.2vw, 3.2rem); }
+  h3 { font-size: 1.5rem; }
+  em.serif { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  p { margin: 0 0 1em; }
 
-  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 20px; }
-  section { padding: 80px 0; }
-  .section-intro { max-width: 620px; color: var(--muted); margin-bottom: 40px; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+  section { padding: 110px 0; }
+  .eyebrow { display: block; font-size: .78rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--red); margin-bottom: 18px; }
+  .lede { font-size: 1.15rem; color: var(--muted); max-width: 36em; }
+  .center { text-align: center; }
+  .center .lede { margin-left: auto; margin-right: auto; }
 
   .skip { position: absolute; left: -9999px; }
-  .skip:focus { left: 16px; top: 16px; background: var(--white); padding: 8px 14px; z-index: 10; border-radius: 6px; }
+  .skip:focus { left: 16px; top: 16px; background: #fff; padding: 8px 14px; z-index: 50; border-radius: 6px; }
   :focus-visible { outline: 3px solid var(--peach); outline-offset: 3px; }
 
-  /* Header */
-  .site-header { background: var(--green); color: var(--cream); }
-  .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; padding-bottom: 18px; }
-  .brand { font-family: "Fraunces", Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--cream); text-decoration: none; }
-  .header-link { color: var(--cream); font-weight: 500; font-size: .95rem; text-decoration: none; border-bottom: 1px solid var(--peach); padding-bottom: 2px; }
-
   /* Buttons */
-  .btn {
-    display: inline-block;
-    background: var(--red);
-    color: #fff;
-    font-weight: 600;
-    font-size: 1.05rem;
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 999px;
-    transition: background-color .15s ease;
-  }
-  .btn:hover { background: var(--red-dark); }
+  .btn { display: inline-block; font: 600 1rem/1 var(--sans); text-decoration: none; padding: 18px 30px; border-radius: 2px; letter-spacing: .02em; border: 1.5px solid transparent; cursor: pointer; transition: background-color .15s, color .15s, border-color .15s; }
+  .btn-red { background: var(--red); color: #fff; }
+  .btn-red:hover { background: var(--red-dark); }
+  .btn-line { border-color: var(--green); color: var(--green); background: transparent; }
+  .btn-line:hover { background: var(--green); color: var(--cream); }
+  .btn-cream { background: var(--cream); color: var(--green); }
+  .btn-cream:hover { background: #fff; }
+  .link-arrow { font-weight: 600; color: var(--green); text-decoration: none; border-bottom: 1.5px solid var(--peach); padding-bottom: 3px; }
+  .link-arrow:hover { border-color: var(--red); }
+
+  /* Photo slots: show a placeholder until the photo file exists */
+  .photo { position: relative; background: var(--peach-soft); overflow: hidden; }
+  .photo.green { background: var(--green-2); }
+  .photo.cream { background: #EDE4D3; }
+  .photo .ph { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; color: var(--green); }
+  .photo.green .ph { color: var(--cream); }
+  .photo .ph span { font-family: var(--serif); font-style: italic; font-size: 1.35rem; }
+  .photo .ph small { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; margin-top: 8px; opacity: .75; }
+  .photo .ph::before { content: ""; position: absolute; inset: 14px; border: 1px solid currentColor; opacity: .25; }
+  .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+  /* Preview banner */
+  .preview { background: #FFF4D6; color: #4A3A10; border-bottom: 1px solid #E8D9A8; font-size: .9rem; }
+  .preview .wrap { padding-top: 10px; padding-bottom: 10px; }
+  .preview summary { cursor: pointer; font-weight: 600; }
+  .preview ul { margin: 8px 0 6px; padding-left: 20px; }
+  .tag { display: inline-block; font-size: .72rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; background: #FFF4D6; color: #6B5414; border: 1px solid #E8D9A8; padding: 3px 9px; border-radius: 999px; margin-bottom: 16px; }
+
+  /* Announcement + header */
+  .announce { background: var(--green); color: var(--cream); text-align: center; font-size: .88rem; letter-spacing: .04em; padding: 11px 20px; }
+  .announce strong { color: var(--peach); font-weight: 600; }
+  .site-header { background: var(--paper); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+  .site-header .wrap { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; height: 78px; }
+  .nav { display: flex; gap: 28px; }
+  .nav a { text-decoration: none; font-size: .92rem; font-weight: 500; color: var(--ink); }
+  .nav a:hover { color: var(--red); }
+  .brand { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; color: var(--green); text-decoration: none; text-align: center; letter-spacing: .01em; line-height: 1.15; }
+  .header-cta { justify-self: end; padding: 13px 20px; font-size: .9rem; }
 
   /* Hero */
-  .hero { background: var(--green); color: var(--cream); padding: 72px 0 96px; }
-  .hero h1 { color: var(--cream); max-width: 12ch; }
-  .hero p { font-size: clamp(1.1rem, 2.4vw, 1.3rem); max-width: 34em; color: #E6E0D2; margin-bottom: 32px; }
-  .hero-rule { width: 64px; height: 4px; background: var(--peach); border-radius: 2px; margin-bottom: 28px; }
+  .hero { padding: 0; background: var(--cream); }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; min-height: min(84vh, 760px); }
+  .hero-copy { padding: 90px 64px 90px max(24px, calc((100vw - var(--wrap)) / 2 + 24px)); display: flex; flex-direction: column; justify-content: center; }
+  .hero-copy p { font-size: 1.2rem; color: var(--muted); max-width: 30em; margin-bottom: 36px; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+  .hero-trust { margin-top: 44px; padding-top: 26px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 10px 18px; font-size: .9rem; color: var(--green); font-weight: 500; }
+  .hero-trust span + span::before { content: ""; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--peach); margin-right: 18px; vertical-align: middle; transform: translateY(-2px); }
+  .hero .photo { min-height: 460px; }
 
-  .strip { background: var(--peach); color: var(--green); text-align: center; font-weight: 600; padding: 14px 20px; font-size: 1rem; }
+  /* Promise row */
+  .promise { padding: 0; background: var(--paper); border-bottom: 1px solid var(--line); }
+  .promise ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); }
+  .promise li { padding: 34px 28px; border-left: 1px solid var(--line); }
+  .promise li:first-child { border-left: 0; padding-left: 0; }
+  .promise strong { display: block; font-family: var(--serif); font-weight: 500; font-size: 1.2rem; color: var(--green); margin-bottom: 4px; }
+  .promise span { font-size: .93rem; color: var(--muted); }
 
-  /* Box cards */
-  .cards { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-  .card {
-    background: var(--white);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  .card.featured { border: 2px solid var(--red); }
-  .badge {
-    position: absolute; top: 14px; right: 14px; z-index: 2;
-    background: var(--red); color: #fff;
-    font-size: .8rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
-    padding: 6px 12px; border-radius: 999px;
-  }
-  /* Image slot: shows a placeholder until the photo file exists */
-  .card-media {
-    position: relative;
-    aspect-ratio: 4 / 3;
-    background: var(--cream);
-    border-bottom: 1px solid var(--line);
-    display: flex; align-items: center; justify-content: center;
-  }
-  .card-media .placeholder {
-    text-align: center; color: var(--muted); font-size: .9rem;
-    border: 1.5px dashed #CDBFA8; border-radius: 10px;
-    padding: 18px 22px; margin: 24px;
-  }
-  .card-media .placeholder strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.15rem; color: var(--green); font-weight: 500; }
-  .card-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  /* Collection */
+  .collection-head { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 56px; flex-wrap: wrap; }
+  .collection-head .lede { margin: 0; }
+  .boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .box { display: flex; flex-direction: column; }
+  .box .photo { aspect-ratio: 4 / 5; margin-bottom: 26px; }
+  .box .badge { position: absolute; top: 18px; left: 18px; z-index: 2; background: var(--red); color: #fff; font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; padding: 7px 12px; }
+  .box-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+  .box-top h3 { margin: 0; font-size: 1.75rem; }
+  .price { font-family: var(--serif); font-size: 1.6rem; color: var(--red); }
+  .best { font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; font-weight: 600; }
+  .box ul { list-style: none; padding: 0; margin: 0 0 26px; border-top: 1px solid var(--line); }
+  .box li { padding: 10px 0; border-bottom: 1px solid var(--line); font-size: .97rem; }
+  .box li.plus { font-family: var(--serif); font-style: italic; color: var(--green); font-size: 1.05rem; }
+  .box .btn { margin-top: auto; text-align: center; }
 
-  .card-body { padding: 26px 26px 28px; display: flex; flex-direction: column; flex: 1; }
-  .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
-  .card-head h3 { margin: 0; }
-  .price { font-family: "Fraunces", Georgia, serif; font-size: 1.6rem; font-weight: 600; color: var(--red); white-space: nowrap; }
-  .price small { font-family: "Inter", sans-serif; font-size: .8rem; color: var(--muted); font-weight: 400; }
-  .card ul { list-style: none; padding: 0; margin: 0 0 20px; }
-  .card li { padding: 7px 0 7px 22px; position: relative; border-top: 1px solid #EFE8DB; font-size: .98rem; }
-  .card li:first-child { border-top: 0; }
-  .card li::before { content: ""; position: absolute; left: 2px; top: 16px; width: 8px; height: 8px; border-radius: 50%; background: var(--peach); }
-  .card li.includes { font-weight: 600; color: var(--green); }
-  .best { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); color: var(--green); font-size: .95rem; margin-bottom: 0; }
-  .best span { font-weight: 600; }
-  .note { text-align: center; margin: 40px auto 0; font-size: 1.1rem; color: var(--green); }
-  .note a { font-weight: 600; }
+  /* Any budget band */
+  .band { background: var(--green); color: var(--cream); padding: 80px 0; }
+  .band .wrap { display: flex; justify-content: space-between; align-items: center; gap: 30px; flex-wrap: wrap; }
+  .band h2 { color: var(--cream); margin: 0 0 .25em; }
+  .band p { margin: 0; color: #DCD5C5; font-size: 1.1rem; }
 
   /* How it works */
-  .how { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); counter-reset: step; }
-  .steps li { counter-increment: step; }
-  .steps li::before {
-    content: counter(step);
-    display: flex; align-items: center; justify-content: center;
-    width: 48px; height: 48px; border-radius: 50%;
-    background: var(--green); color: var(--cream);
-    font-family: "Fraunces", Georgia, serif; font-size: 1.3rem; font-weight: 600;
-    margin-bottom: 16px;
-  }
-  .steps h3 { font-size: 1.2rem; margin-bottom: .3em; }
+  .how { background: var(--cream); }
+  .steps { list-style: none; padding: 0; margin: 60px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; counter-reset: s; }
+  .steps li { counter-increment: s; padding: 0 28px 0 0; position: relative; }
+  .steps li::before { content: "0" counter(s); display: block; font-family: var(--serif); font-size: 3.4rem; color: var(--peach); line-height: 1; margin-bottom: 22px; }
+  .steps li::after { content: ""; position: absolute; top: 28px; left: 92px; right: 18px; height: 1px; background: var(--line); }
+  .steps li:last-child::after { display: none; }
+  .steps h3 { font-size: 1.3rem; margin-bottom: .4em; }
   .steps p { color: var(--muted); font-size: .97rem; margin: 0; }
 
-  /* Extras */
-  .extras { list-style: none; padding: 0; margin: 0; max-width: 720px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); }
-  .extras li { display: flex; justify-content: space-between; gap: 20px; padding: 18px 24px; border-top: 1px solid var(--line); }
-  .extras li:first-child { border-top: 0; }
-  .extras .cost { font-weight: 600; color: var(--red); white-space: nowrap; text-align: right; }
+  /* Personal touches (extras) */
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .split .photo { aspect-ratio: 1 / 1; }
+  .extras { list-style: none; padding: 0; margin: 34px 0 0; border-top: 1px solid var(--line); }
+  .extras li { display: flex; justify-content: space-between; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+  .extras .cost { font-family: var(--serif); color: var(--red); white-space: nowrap; font-size: 1.1rem; }
 
   /* Story */
   .story { background: var(--green); color: var(--cream); }
-  .story h2 { color: var(--cream); }
-  .story .wrap { max-width: 760px; }
-  .story p { font-size: 1.12rem; line-height: 1.75; color: #E6E0D2; }
-  .story .sign { font-family: "Fraunces", Georgia, serif; font-size: 1.5rem; color: var(--peach); margin-top: 24px; }
+  .story .wrap { max-width: 900px; }
+  .story .eyebrow { color: var(--peach); }
+  .story .opening { font-family: var(--serif); font-size: clamp(1.8rem, 3.6vw, 2.7rem); line-height: 1.25; color: var(--cream); margin-bottom: 40px; font-weight: 400; }
+  .story-body { columns: 2; column-gap: 48px; color: #DCD5C5; font-size: 1.05rem; line-height: 1.8; }
+  .story-body p { break-inside: avoid; }
+  .sign { margin-top: 30px; font-family: var(--serif); font-style: italic; font-size: 1.7rem; color: var(--peach); }
+  .sign small { display: block; font-family: var(--sans); font-style: normal; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: #BFB8A8; margin-top: 4px; }
 
-  /* Final CTA */
-  .cta { text-align: center; }
-  .cta h2 { margin-bottom: .4em; }
-  .cta p { color: var(--muted); margin-bottom: 30px; }
+  /* Customer quotes */
+  .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 50px; }
+  .quotes figure { margin: 0; padding-top: 28px; border-top: 2px solid var(--green); }
+  .quotes blockquote { margin: 0 0 22px; font-family: var(--serif); font-size: 1.3rem; line-height: 1.45; color: var(--green); }
+  .quotes figcaption { color: var(--muted); font-size: .9rem; }
+  .quotes figcaption strong { color: var(--ink); display: block; font-weight: 600; }
 
-  footer { background: var(--green); color: #D9D3C4; padding: 40px 0; font-size: .95rem; }
-  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; }
-  footer .brand { font-size: 1.15rem; }
-  footer a { color: var(--peach); }
-
-  /* Preview banner */
-  .preview { background: #FFF4D6; color: #4A3A10; border-bottom: 1px solid #E8D9A8; font-size: .92rem; }
-  .preview .wrap { padding-top: 10px; padding-bottom: 10px; }
-  .preview summary { cursor: pointer; font-weight: 600; }
-  .preview ul { margin: 8px 0 4px; padding-left: 20px; }
-  .tag { display: inline-block; font-size: .72rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; background: #FFF4D6; color: #6B5414; border: 1px solid #E8D9A8; padding: 2px 8px; border-radius: 999px; margin-bottom: 12px; }
-
-  /* Header nav */
-  .nav { display: flex; gap: 22px; align-items: center; }
-  .nav a { color: var(--cream); text-decoration: none; font-size: .95rem; font-weight: 500; }
-  .nav a:hover { color: var(--peach); }
+  /* FAQ */
+  .faq-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: start; }
+  .faq details { border-bottom: 1px solid var(--line); }
+  .faq details:first-child { border-top: 1px solid var(--line); }
+  .faq summary { cursor: pointer; list-style: none; padding: 22px 46px 22px 0; position: relative; font-family: var(--serif); font-size: 1.25rem; color: var(--green); }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-family: var(--sans); font-size: 1.5rem; font-weight: 300; color: var(--red); }
+  .faq details[open] summary::after { content: "\2212"; }
+  .faq .answer { padding: 0 0 22px; color: var(--muted); max-width: 40em; }
+  .faq .answer p:last-child { margin: 0; }
 
   /* Quote form */
-  .quote { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .quote-grid { display: grid; gap: 40px; grid-template-columns: 1fr 1.4fr; align-items: start; }
-  .quote-aside p { color: var(--muted); }
-  .quote-aside .alt { font-size: .95rem; }
-  form { display: grid; gap: 18px; grid-template-columns: 1fr 1fr; }
-  .field { display: flex; flex-direction: column; gap: 6px; }
+  .quote { background: var(--green); }
+  .quote-grid { display: grid; grid-template-columns: 1fr 1.35fr; gap: 70px; align-items: start; }
+  .quote-aside h2 { color: var(--cream); }
+  .quote-aside .eyebrow { color: var(--peach); }
+  .quote-aside p { color: #DCD5C5; font-size: 1.08rem; }
+  .quote-aside .alt { font-size: .97rem; }
+  .quote-aside .alt a { color: var(--peach); }
+  .quote-aside dl { margin: 34px 0 0; border-top: 1px solid #3B6349; }
+  .quote-aside dl div { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid #3B6349; color: var(--cream); font-size: .97rem; }
+  .quote-aside dt { color: #BFB8A8; }
+  .quote-aside dd { margin: 0; font-weight: 500; text-align: right; }
+  form { background: var(--paper); padding: 44px; display: grid; gap: 20px; grid-template-columns: 1fr 1fr; }
+  .field { display: flex; flex-direction: column; gap: 7px; }
   .field.full { grid-column: 1 / -1; }
-  label, legend { font-weight: 600; font-size: .95rem; color: var(--green); }
-  .hint { font-weight: 400; color: var(--muted); font-size: .85rem; }
-  input, select, textarea {
-    font: inherit; color: var(--ink); background: #fff;
-    border: 1.5px solid #CFC4B2; border-radius: 10px; padding: 12px 14px; width: 100%;
-  }
+  label { font-weight: 600; font-size: .9rem; color: var(--green); }
+  .hint { font-weight: 400; color: var(--muted); font-size: .84rem; }
+  input, select, textarea { font: inherit; color: var(--ink); background: #fff; border: 1px solid #CFC4B2; border-radius: 2px; padding: 13px 14px; width: 100%; }
   input:focus, select:focus, textarea:focus { border-color: var(--green); outline: 3px solid rgba(242,160,123,.6); outline-offset: 1px; }
+  input[aria-invalid="true"] { border-color: var(--red); }
   textarea { min-height: 110px; resize: vertical; }
-  form .btn { border: 0; cursor: pointer; justify-self: start; font-family: inherit; }
+  form .btn { justify-self: start; font-family: var(--sans); }
   .form-status { grid-column: 1 / -1; margin: 0; font-weight: 500; }
   .form-status.ok { color: var(--green); }
   .form-status.err { color: var(--red); }
   .hp { position: absolute; left: -9999px; }
 
-  /* FAQ */
-  .faq { max-width: 760px; }
-  .faq details { background: var(--white); border: 1px solid var(--line); border-radius: 12px; margin-bottom: 12px; }
-  .faq summary { cursor: pointer; padding: 18px 22px; font-weight: 600; color: var(--green); list-style: none; position: relative; padding-right: 52px; }
-  .faq summary::-webkit-details-marker { display: none; }
-  .faq summary::after { content: "+"; position: absolute; right: 22px; top: 50%; transform: translateY(-50%); font-size: 1.4rem; color: var(--red); font-weight: 400; }
-  .faq details[open] summary::after { content: "\2212"; }
-  .faq .answer { padding: 0 22px 18px; color: var(--muted); }
-  .faq .answer p:last-child { margin-bottom: 0; }
+  /* Final CTA */
+  .cta { background: var(--cream); text-align: center; }
+  .cta h2 { font-size: clamp(2.3rem, 5vw, 3.8rem); }
+  .cta p { color: var(--muted); margin-bottom: 34px; font-size: 1.1rem; }
 
-  /* Customer quotes */
-  .quotes { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-  .quotes figure { margin: 0; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; }
-  .quotes blockquote { margin: 0 0 18px; font-family: "Fraunces", Georgia, serif; font-size: 1.2rem; line-height: 1.45; color: var(--green); }
-  .quotes figcaption { margin-top: auto; color: var(--muted); font-size: .92rem; }
-  .quotes figcaption strong { color: var(--ink); display: block; }
+  /* Footer */
+  footer { background: #17301F; color: #C9C2B2; padding: 70px 0 40px; font-size: .94rem; }
+  .foot-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; }
+  footer .brand { text-align: left; color: var(--cream); display: block; margin-bottom: 10px; }
+  footer h4 { font-size: .76rem; letter-spacing: .16em; text-transform: uppercase; color: var(--peach); margin: 0 0 14px; font-weight: 600; }
+  footer p { margin: 0 0 6px; }
+  footer a { color: var(--cream); }
+  .foot-base { margin-top: 56px; padding-top: 24px; border-top: 1px solid #2F4A38; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: .85rem; color: #9E9886; }
+  .foot-base a { color: #9E9886; }
 
   /* Booked-out state */
   .closed-only { display: none; }
   body.orders-closed .closed-only { display: block; }
   body.orders-closed .open-only { display: none; }
-  .strip.closed-only { background: var(--green); color: var(--cream); border-top: 1px solid #2E5640; }
 
-  @media (max-width: 860px) {
-    .quote-grid { grid-template-columns: 1fr; gap: 24px; }
-    .nav a:not(.header-link) { display: none; }
+  /* Responsive */
+  @media (max-width: 1000px) {
+    .nav { display: none; }
+    .site-header .wrap { grid-template-columns: 1fr auto; }
+    .brand { text-align: left; }
+    .hero-grid { grid-template-columns: 1fr; min-height: 0; }
+    .hero-copy { padding: 64px 24px 56px; }
+    .hero .photo { min-height: 0; aspect-ratio: 4 / 3; }
+    .promise ul { grid-template-columns: 1fr 1fr; }
+    .promise li { border-left: 0; padding: 26px 0; border-top: 1px solid var(--line); }
+    .promise li:nth-child(-n+2) { border-top: 0; }
+    .promise li:nth-child(even) { padding-left: 24px; border-left: 1px solid var(--line); }
+    .boxes { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; gap: 64px; }
+    .steps { grid-template-columns: 1fr 1fr; gap: 44px 0; }
+    .steps li::after { display: none; }
+    .split, .faq-grid, .quote-grid { grid-template-columns: 1fr; gap: 44px; }
+    .quotes { grid-template-columns: 1fr; gap: 32px; }
+    .story-body { columns: 1; }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
   }
-
   @media (max-width: 600px) {
-    form { grid-template-columns: 1fr; }
-    section { padding: 60px 0; }
-    .hero { padding: 52px 0 72px; }
-    .btn { display: block; text-align: center; }
+    section { padding: 76px 0; }
+    .band { padding: 60px 0; }
+    .header-cta { padding: 11px 14px; font-size: .85rem; }
+    .brand { font-size: 1.25rem; }
+    .hero-actions .btn { flex: 1 1 100%; text-align: center; }
+    .hero-trust span + span::before { display: none; }
+    .promise ul { grid-template-columns: 1fr; }
+    .promise li, .promise li:nth-child(even) { padding: 22px 0; border-left: 0; border-top: 1px solid var(--line); }
+    .promise li:first-child { border-top: 0; }
+    .steps { grid-template-columns: 1fr; }
+    form { grid-template-columns: 1fr; padding: 26px 20px; }
+    form .btn { justify-self: stretch; text-align: center; }
     .extras li { flex-direction: column; gap: 2px; }
-    .extras .cost { text-align: left; }
-    .header-link { display: none; }
+    .foot-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -302,170 +321,208 @@
     <details>
       <summary>Ideas preview for Stella. Customer quotes and FAQ answers are examples, not real. Tap to see what&rsquo;s new.</summary>
       <ul>
-        <li><strong>Quote form</strong> instead of an email link, so it works for everyone, even people with no email app set up.</li>
+        <li><strong>New look</strong>: a more premium, photo-led design with big photo spaces ready for real pictures.</li>
+        <li><strong>Quote form</strong> instead of an email link, so it works for everyone. Each box has its own &ldquo;Choose this box&rdquo; button that fills in the form.</li>
         <li><strong>FAQ</strong> answering what business buyers ask before ordering (example answers: Stella to check).</li>
         <li><strong>Customer quotes</strong> section, ready for real quotes after the first orders.</li>
-        <li><strong>Sharing preview</strong>: a picture and title when the link is pasted into LinkedIn, Facebook or Teams.</li>
-        <li><strong>Google details</strong>: a better page title and description, and business info Google can read.</li>
-        <li><strong>Booked-out switch</strong>: one setting at the top to close orders, and it closes them by itself after 4 December.</li>
-        <li><strong>Menu</strong> in the header to jump to each section.</li>
+        <li><strong>Sharing preview</strong> picture, <strong>Google details</strong>, and a <strong>booked-out switch</strong> that also closes orders by itself after 4 December.</li>
       </ul>
       <p style="margin:0 0 6px"><a href="index.html">Back to the current site</a></p>
-      <p style="margin:0">Still to do outside the website: real box photos, a web address like stellasgifts.co.nz, and a free Google Business Profile.</p>
+      <p style="margin:0">Photo spaces to fill: images/hero.jpg, thank-you.jpg, good-year.jpg, big-cheers.jpg and packing.jpg.</p>
     </details>
   </div>
 </div>
 
+<div class="announce">
+  <span class="open-only">Christmas orders close <strong>Friday 4 December</strong> &middot; Delivered 14&ndash;18 December</span>
+  <span class="closed-only">Orders for this Christmas are now closed. Thank you for a wonderful season.</span>
+</div>
+
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="#top" data-business-name>[BUSINESS NAME]</a>
     <nav class="nav" aria-label="Main">
-      <a href="#boxes">Boxes</a>
+      <a href="#boxes">The boxes</a>
       <a href="#how">How it works</a>
+      <a href="#story">Our story</a>
       <a href="#faq">FAQ</a>
-      <a class="header-link" href="#quote">Get a quote</a>
     </nav>
+    <a class="brand" href="#top" data-business-name>[BUSINESS NAME]</a>
+    <a class="btn btn-red header-cta" href="#quote">Request a quote</a>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- 1. HERO -->
+  <!-- HERO. PHOTO: images/hero.jpg (a stack of finished boxes looks great here) -->
   <section class="hero" id="top" aria-labelledby="hero-title">
-    <div class="wrap">
-      <div class="hero-rule" aria-hidden="true"></div>
-      <h1 id="hero-title">Christmas gifts, sorted.</h1>
-      <p>Gift boxes for your clients and your team, chosen, packed and delivered for you. You tell us how many. We do the rest.</p>
-      <a class="btn" href="#quote">Get a quote</a>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Corporate Christmas gifting &middot; Northland</span>
+        <h1 id="hero-title">Christmas gifts, <em class="serif">sorted.</em></h1>
+        <p>Gift boxes for your clients and your team, chosen, packed and delivered for you. You tell us how many. We do the rest.</p>
+        <div class="hero-actions">
+          <a class="btn btn-red" href="#quote">Request a quote</a>
+          <a class="btn btn-line" href="#boxes">See the boxes</a>
+        </div>
+        <div class="hero-trust" aria-label="Why choose us">
+          <span>Packed by hand in Whangārei</span>
+          <span>Northland &amp; NZ-made</span>
+          <span>One invoice</span>
+        </div>
+      </div>
+      <div class="photo">
+        <div class="ph" aria-hidden="true"><span>Your finished boxes</span><small>images/hero.jpg</small></div>
+        <img src="images/hero.jpg" alt="A stack of wrapped Christmas gift boxes ready for delivery" onerror="this.remove()">
+      </div>
     </div>
   </section>
-  <div class="strip open-only">Order by Friday 4 December &middot; Delivered 14&ndash;18 December</div>
-  <div class="strip closed-only">Orders for this Christmas are now closed. Thank you for a wonderful season. Email us to get on next year&rsquo;s list.</div>
 
-  <!-- 2. THE BOXES -->
+  <!-- PROMISE ROW -->
+  <section class="promise" aria-label="What you get">
+    <div class="wrap">
+      <ul>
+        <li><strong>Chosen for you</strong><span>Local treats your team will actually enjoy.</span></li>
+        <li><strong>Your message</strong><span>A printed card in every box, approved by you.</span></li>
+        <li><strong>Named boxes</strong><span>Every box made out to the person, free.</span></li>
+        <li><strong>On time</strong><span>Delivered 14&ndash;18 December, before the break.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- THE BOXES. PHOTOS: images/thank-you.jpg, good-year.jpg, big-cheers.jpg (portrait works best) -->
   <section id="boxes" aria-labelledby="boxes-title">
     <div class="wrap">
-      <h2 id="boxes-title">The boxes</h2>
-      <p class="section-intro">Three boxes, filled with Northland and NZ-made treats wherever we can. Prices are per box.</p>
-
-      <div class="cards">
-        <!-- Box 1. PHOTO: put the photo at images/thank-you.jpg -->
-        <article class="card">
-          <div class="card-media">
-            <div class="placeholder" aria-hidden="true"><strong>The Thank You</strong>Photo coming soon</div>
-            <img src="images/thank-you.jpg" alt="The Thank You gift box with shortbread, coffee, chocolate and candy canes" loading="lazy" onerror="this.remove()">
-          </div>
-          <div class="card-body">
-            <div class="card-head">
-              <h3>The Thank You</h3>
-              <span class="price">$55</span>
-            </div>
-            <ul>
-              <li>Christmas shortbread from a local bakery</li>
-              <li>Northland-roasted coffee or loose-leaf tea</li>
-              <li>Quality chocolate</li>
-              <li>Candy canes</li>
-              <li>Printed card with your message</li>
-            </ul>
-            <p class="best"><span>Best for</span> teams and suppliers</p>
-          </div>
-        </article>
-
-        <!-- Box 2. PHOTO: put the photo at images/good-year.jpg -->
-        <article class="card featured">
-          <span class="badge">Most popular</span>
-          <div class="card-media">
-            <div class="placeholder" aria-hidden="true"><strong>The Good Year</strong>Photo coming soon</div>
-            <img src="images/good-year.jpg" alt="The Good Year gift box with honey, chutney, crackers and a soy candle" loading="lazy" onerror="this.remove()">
-          </div>
-          <div class="card-body">
-            <div class="card-head">
-              <h3>The Good Year</h3>
-              <span class="price">$95</span>
-            </div>
-            <ul>
-              <li class="includes">Everything in The Thank You, plus:</li>
-              <li>Northland honey</li>
-              <li>Small-batch chutney or relish</li>
-              <li>Gourmet crackers</li>
-              <li>Hand-poured soy candle</li>
-            </ul>
-            <p class="best"><span>Best for</span> key clients and managers</p>
-          </div>
-        </article>
-
-        <!-- Box 3. PHOTO: put the photo at images/big-cheers.jpg -->
-        <article class="card">
-          <div class="card-media">
-            <div class="placeholder" aria-hidden="true"><strong>The Big Cheers</strong>Photo coming soon</div>
-            <img src="images/big-cheers.jpg" alt="The Big Cheers keepsake gift box with mānuka honey, hand cream and a wooden serving board" loading="lazy" onerror="this.remove()">
-          </div>
-          <div class="card-body">
-            <div class="card-head">
-              <h3>The Big Cheers</h3>
-              <span class="price">$150</span>
-            </div>
-            <ul>
-              <li class="includes">Everything in The Good Year, plus:</li>
-              <li>Premium mānuka honey</li>
-              <li>NZ-made hand cream</li>
-              <li>Wooden serving board</li>
-              <li>Rigid keepsake gift box</li>
-            </ul>
-            <p class="best"><span>Best for</span> top clients</p>
-          </div>
-        </article>
+      <div class="collection-head">
+        <div>
+          <span class="eyebrow">The collection</span>
+          <h2 id="boxes-title">Three boxes, <em class="serif">one for everyone.</em></h2>
+        </div>
+        <p class="lede">Filled with Northland and NZ-made treats wherever we can. Prices are per box.</p>
       </div>
 
-      <p class="note">Any budget? Just <a href="#quote">tell us</a> and we&rsquo;ll build a box to match.</p>
+      <div class="boxes">
+        <article class="box">
+          <div class="photo">
+            <div class="ph" aria-hidden="true"><span>The Thank You</span><small>images/thank-you.jpg</small></div>
+            <img src="images/thank-you.jpg" alt="The Thank You gift box with shortbread, coffee, chocolate and candy canes" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="box-top"><h3>The Thank You</h3><span class="price">$55</span></div>
+          <p class="best">Best for teams and suppliers</p>
+          <ul>
+            <li>Christmas shortbread from a local bakery</li>
+            <li>Northland-roasted coffee or loose-leaf tea</li>
+            <li>Quality chocolate</li>
+            <li>Candy canes</li>
+            <li>Printed card with your message</li>
+          </ul>
+          <a class="btn btn-line" href="#quote" data-box="The Thank You ($55)">Choose this box</a>
+        </article>
+
+        <article class="box">
+          <div class="photo cream">
+            <span class="badge">Most popular</span>
+            <div class="ph" aria-hidden="true"><span>The Good Year</span><small>images/good-year.jpg</small></div>
+            <img src="images/good-year.jpg" alt="The Good Year gift box with honey, chutney, crackers and a soy candle" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="box-top"><h3>The Good Year</h3><span class="price">$95</span></div>
+          <p class="best">Best for key clients and managers</p>
+          <ul>
+            <li class="plus">Everything in The Thank You, plus</li>
+            <li>Northland honey</li>
+            <li>Small-batch chutney or relish</li>
+            <li>Gourmet crackers</li>
+            <li>Hand-poured soy candle</li>
+          </ul>
+          <a class="btn btn-red" href="#quote" data-box="The Good Year ($95)">Choose this box</a>
+        </article>
+
+        <article class="box">
+          <div class="photo green">
+            <div class="ph" aria-hidden="true"><span>The Big Cheers</span><small>images/big-cheers.jpg</small></div>
+            <img src="images/big-cheers.jpg" alt="The Big Cheers keepsake gift box with mānuka honey, hand cream and a wooden serving board" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="box-top"><h3>The Big Cheers</h3><span class="price">$150</span></div>
+          <p class="best">Best for top clients</p>
+          <ul>
+            <li class="plus">Everything in The Good Year, plus</li>
+            <li>Premium mānuka honey</li>
+            <li>NZ-made hand cream</li>
+            <li>Wooden serving board</li>
+            <li>Rigid keepsake gift box</li>
+          </ul>
+          <a class="btn btn-line" href="#quote" data-box="The Big Cheers ($150)">Choose this box</a>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- 3. HOW IT WORKS -->
+  <!-- ANY BUDGET -->
+  <section class="band" aria-labelledby="budget-title">
+    <div class="wrap">
+      <div>
+        <h2 id="budget-title">Any budget?</h2>
+        <p>Just tell us and we&rsquo;ll build a box to match.</p>
+      </div>
+      <a class="btn btn-cream" href="#quote" data-box="A custom budget">Build a custom box</a>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
   <section class="how" id="how" aria-labelledby="how-title">
     <div class="wrap">
-      <h2 id="how-title">How it works</h2>
-      <p class="section-intro">Four steps, and only the first one needs you.</p>
+      <span class="eyebrow">How it works</span>
+      <h2 id="how-title">Four steps. <em class="serif">Only the first needs you.</em></h2>
       <ol class="steps">
         <li><h3>Tell us how many</h3><p>Send us the number of people and your budget per person.</p></li>
-        <li><h3>Approve your card</h3><p>We send you the card with your message to check. Adding your logo is optional.</p></li>
+        <li><h3>Approve your card</h3><p>We send you the card with your message to check. Your logo is optional.</p></li>
         <li><h3>We pack every box</h3><p>Every box is packed by hand, with care.</p></li>
         <li><h3>Delivered before Christmas</h3><p>Your boxes arrive before Christmas, with one invoice for everything.</p></li>
       </ol>
     </div>
   </section>
 
-  <!-- 4. EXTRAS -->
+  <!-- PERSONAL TOUCHES (EXTRAS). PHOTO: images/packing.jpg (hands packing a box) -->
   <section aria-labelledby="extras-title">
-    <div class="wrap">
-      <h2 id="extras-title">Extras</h2>
-      <p class="section-intro">Make it a little more personal.</p>
-      <ul class="extras">
-        <li><span>Each box named for the person</span><span class="cost">Free</span></li>
-        <li><span>Logo seal on every box</span><span class="cost">+$3 per box</span></li>
-        <li><span>Branded gift bags</span><span class="cost">Price on request</span></li>
-        <li><span>Delivery to each person</span><span class="cost">From $12</span></li>
-      </ul>
+    <div class="wrap split">
+      <div class="photo">
+        <div class="ph" aria-hidden="true"><span>Packed by hand</span><small>images/packing.jpg</small></div>
+        <img src="images/packing.jpg" alt="Hands packing a Christmas gift box with tissue paper" loading="lazy" onerror="this.remove()">
+      </div>
+      <div>
+        <span class="eyebrow">Personal touches</span>
+        <h2 id="extras-title">Make it <em class="serif">yours.</em></h2>
+        <p class="lede">Small details that make a gift feel chosen, not bought.</p>
+        <ul class="extras">
+          <li><span>Each box named for the person</span><span class="cost">Free</span></li>
+          <li><span>Logo seal on every box</span><span class="cost">+$3 per box</span></li>
+          <li><span>Branded gift bags</span><span class="cost">Price on request</span></li>
+          <li><span>Delivery to each person</span><span class="cost">From $12</span></li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- 5. OUR STORY -->
-  <section class="story" aria-labelledby="story-title">
+  <!-- OUR STORY -->
+  <section class="story" id="story" aria-labelledby="story-title">
     <div class="wrap">
-      <h2 id="story-title">Our story</h2>
-      <p>Hi, I&rsquo;m Stella. I&rsquo;m 12, and I&rsquo;ve always wanted my own business. I grew up around a family business, watching how hard everyone works and how much they care about their customers.</p>
-      <p>Every December I noticed the same thing: busy people wanting to say thank you to their team, but never having the time to sort the gifts. So that&rsquo;s what I do. You tell me how many people and your budget, and I take care of the rest. I use Northland and NZ-made treats wherever I can.</p>
-      <p>I&rsquo;m not the cheapest, and I&rsquo;m not trying to be. I work hard, I answer my emails, and I&rsquo;ll make sure every box is something your team is happy to get.</p>
-      <p class="sign">Stella</p>
+      <span class="eyebrow" id="story-title">Our story</span>
+      <p class="opening">Hi, I&rsquo;m Stella. I&rsquo;m 12, and I&rsquo;ve always wanted my own business.</p>
+      <div class="story-body">
+        <p>I grew up around a family business, watching how hard everyone works and how much they care about their customers.</p>
+        <p>Every December I noticed the same thing: busy people wanting to say thank you to their team, but never having the time to sort the gifts. So that&rsquo;s what I do. You tell me how many people and your budget, and I take care of the rest. I use Northland and NZ-made treats wherever I can.</p>
+        <p>I&rsquo;m not the cheapest, and I&rsquo;m not trying to be. I work hard, I answer my emails, and I&rsquo;ll make sure every box is something your team is happy to get.</p>
+      </div>
+      <p class="sign">Stella<small>Founder</small></p>
     </div>
   </section>
 
-  <!-- 6. CUSTOMER QUOTES: replace the examples with real ones (with permission) after the first orders -->
+  <!-- CUSTOMER QUOTES: replace the examples with real ones (with permission) after the first orders -->
   <section aria-labelledby="kind-title">
     <div class="wrap">
       <span class="tag">Examples only</span>
+      <span class="eyebrow">Kind words</span>
       <h2 id="kind-title">What customers say</h2>
-      <p class="section-intro">Placeholder quotes to show the idea. Swap in real ones once customers have their boxes.</p>
+      <p class="lede">Placeholder quotes to show the idea. Swap in real ones once customers have their boxes.</p>
       <div class="quotes">
         <figure>
           <blockquote>&ldquo;One email and our whole team was sorted. The boxes looked beautiful and everyone loved the local treats.&rdquo;</blockquote>
@@ -483,12 +540,15 @@
     </div>
   </section>
 
-  <!-- 7. FAQ: example answers, Stella to check every one -->
-  <section id="faq" aria-labelledby="faq-title">
-    <div class="wrap">
-      <span class="tag">Example answers</span>
-      <h2 id="faq-title">Questions</h2>
-      <p class="section-intro">The things people usually want to know before ordering.</p>
+  <!-- FAQ: example answers, Stella to check every one -->
+  <section class="how" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-grid">
+      <div>
+        <span class="tag">Example answers</span>
+        <span class="eyebrow">Good to know</span>
+        <h2 id="faq-title">Questions</h2>
+        <p class="lede">The things people usually ask before ordering. Anything else, <a class="link-arrow" href="#quote">just ask</a>.</p>
+      </div>
       <div class="faq">
         <details>
           <summary>Is there a minimum order?</summary>
@@ -522,14 +582,20 @@
     </div>
   </section>
 
-  <!-- 8. QUOTE FORM -->
+  <!-- QUOTE FORM -->
   <section class="quote" id="quote" aria-labelledby="quote-title">
     <div class="wrap quote-grid">
       <div class="quote-aside">
-        <h2 id="quote-title">Get a quote</h2>
-        <p class="open-only">Tell us a little about your order and we&rsquo;ll reply within one working day with a quote.</p>
+        <span class="eyebrow">Request a quote</span>
+        <h2 id="quote-title">Tell us about <em class="serif">your team.</em></h2>
+        <p class="open-only">A few details and we&rsquo;ll reply within one working day with a quote.</p>
         <p class="closed-only">Orders for this Christmas are closed. Leave your details and we&rsquo;ll get in touch next year before the rush.</p>
-        <p class="alt">Rather email? Write to <a class="quote-link" href="mailto:Stellasgifts.nz@gmail.com">Stellasgifts.nz@gmail.com</a></p>
+        <p class="alt">Rather email? Write to <a href="mailto:Stellasgifts.nz@gmail.com?subject=Christmas%20gift%20quote">Stellasgifts.nz@gmail.com</a></p>
+        <dl>
+          <div><dt>Order by</dt><dd>Friday 4 December</dd></div>
+          <div><dt>Delivered</dt><dd>14&ndash;18 December</dd></div>
+          <div><dt>Boxes from</dt><dd>$55 each</dd></div>
+        </dl>
       </div>
       <form id="quote-form" novalidate>
         <div class="field">
@@ -572,19 +638,19 @@
           <textarea id="f-notes" name="notes"></textarea>
         </div>
         <div class="hp" aria-hidden="true"><label for="f-hp">Leave this empty</label><input id="f-hp" name="_gotcha" tabindex="-1" autocomplete="off"></div>
-        <button class="btn" type="submit">Send my quote request</button>
+        <button class="btn btn-red" type="submit">Send my quote request</button>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
   </section>
 
-  <!-- 9. FINAL CALL TO ACTION -->
+  <!-- FINAL CALL TO ACTION -->
   <section class="cta" aria-labelledby="cta-title">
     <div class="wrap">
-      <h2 id="cta-title">Let&rsquo;s get your Christmas sorted.</h2>
+      <h2 id="cta-title">Let&rsquo;s get your Christmas <em class="serif">sorted.</em></h2>
       <p class="open-only">Order by Friday 4 December for delivery 14&ndash;18 December.</p>
       <p class="closed-only">Orders for this Christmas are closed. See you next year.</p>
-      <a class="btn" href="#quote">Get a quote</a>
+      <a class="btn btn-red" href="#quote">Request a quote</a>
     </div>
   </section>
 
@@ -592,17 +658,35 @@
 
 <footer>
   <div class="wrap">
-    <div>
-      <div class="brand" data-business-name>[BUSINESS NAME]</div>
-      <div>Whangārei, Northland</div>
+    <div class="foot-grid">
+      <div>
+        <span class="brand" data-business-name>[BUSINESS NAME]</span>
+        <p>Christmas gift boxes for clients and teams, packed by hand in Northland.</p>
+      </div>
+      <div>
+        <h4>Order</h4>
+        <p>Order by Friday 4 December</p>
+        <p>Delivered 14&ndash;18 December</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="mailto:Stellasgifts.nz@gmail.com">Stellasgifts.nz@gmail.com</a></p>
+      </div>
+      <div>
+        <h4>Based in</h4>
+        <p>Whangārei, Northland</p>
+      </div>
     </div>
-    <div><a href="mailto:Stellasgifts.nz@gmail.com">Stellasgifts.nz@gmail.com</a></div>
+    <div class="foot-base">
+      <span>&copy; 2026 <span data-business-name>[BUSINESS NAME]</span></span>
+      <a href="#top">Back to top</a>
+    </div>
   </div>
 </footer>
 
 <script>
-  // Fills in the business name everywhere.
   (function () {
+    // Business name everywhere
     var name = window.BUSINESS_NAME;
     document.querySelectorAll("[data-business-name]").forEach(function (el) { el.textContent = name; });
     document.title = name + " | Corporate Christmas gift boxes, Whangārei";
@@ -611,9 +695,16 @@
     var closed = window.ORDERS_CLOSED || (window.ORDER_DEADLINE && new Date() > new Date(window.ORDER_DEADLINE));
     if (closed) document.body.classList.add("orders-closed");
 
-    // Quote form
     var form = document.getElementById("quote-form");
     var status = document.getElementById("form-status");
+    var boxSelect = document.getElementById("f-box");
+
+    // "Choose this box" buttons fill in the form
+    document.querySelectorAll("[data-box]").forEach(function (a) {
+      a.addEventListener("click", function () { boxSelect.value = a.getAttribute("data-box"); });
+    });
+
+    // Quote form
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       status.className = "form-status";
