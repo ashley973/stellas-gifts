@@ -39,3 +39,11 @@ The easiest way, in the browser:
 1. Open the repository on github.com.
 2. To edit text: click `index.html`, click the pencil icon, make the change, then click **Commit changes**.
 3. To add photos: open the `images` folder, click **Add file > Upload files**, drag the photos in, then click **Commit changes**.
+
+## Ideas preview (`inspiration.html`)
+A second version of the page showing upgrade ideas: a quote form, FAQ, customer quotes, a sharing preview
+picture (`images/share.png`), better Google details and a booked-out switch. The customer quotes and FAQ answers
+are examples only. All its settings (business name, form address, booked-out switch) are in one block at the top.
+
+To make it the real homepage: replace the example quotes and FAQ answers with real ones, delete the preview
+banner block and the `noindex` line, then rename it to `index.html` (replacing the old one).

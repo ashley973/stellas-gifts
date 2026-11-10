@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<!-- ============================================================
+     SETTINGS: change these, in this one place only.
+     ============================================================ -->
+<script>
+  // The business name. Fills in the page title, header and footer.
+  window.BUSINESS_NAME = "[BUSINESS NAME]";
+
+  // Quote form. Leave empty and the form opens a ready-written email instead.
+  // To get requests straight to the inbox, sign up free at formspree.io with
+  // Stella's Gmail, create a form, and paste its address here, e.g.
+  // "https://formspree.io/f/abcdwxyz"
+  window.FORM_ENDPOINT = "";
+
+  // Booked-out switch. Set to true when Stella is full.
+  // The site also closes orders by itself after the deadline below.
+  window.ORDERS_CLOSED = false;
+  window.ORDER_DEADLINE = "2026-12-04T23:59:00+13:00";
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corporate Christmas gift boxes, Whangārei and Northland</title>
+<meta name="description" content="Corporate Christmas gift boxes for your clients and your team, chosen, packed and delivered for you. Northland and NZ-made treats from $55. Whangārei, Northland.">
+<!-- This is an ideas preview, so search engines are asked to skip it.
+     Remove the next line if this page becomes the real homepage. -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://ashley973.github.io/stellas-gifts/">
+
+<!-- Sharing preview: what shows when the link is pasted into LinkedIn, Facebook, Teams, Messenger -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ashley973.github.io/stellas-gifts/">
+<meta property="og:title" content="Christmas gifts, sorted.">
+<meta property="og:description" content="Gift boxes for your clients and your team, chosen, packed and delivered for you. Whangārei, Northland. From $55.">
+<meta property="og:image" content="https://ashley973.github.io/stellas-gifts/images/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Christmas gifts, sorted. Corporate gift boxes, Whangārei, Northland.">
+<meta property="og:locale" content="en_NZ">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Tells Google what this business is -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "[BUSINESS NAME]",
+  "description": "Corporate Christmas gift boxes, chosen, packed and delivered for you.",
+  "url": "https://ashley973.github.io/stellas-gifts/",
+  "email": "Stellasgifts.nz@gmail.com",
+  "image": "https://ashley973.github.io/stellas-gifts/images/share.png",
+  "priceRange": "$55 to $150 per box",
+  "areaServed": {"@type": "AdministrativeArea", "name": "Northland, New Zealand"},
+  "address": {"@type": "PostalAddress", "addressLocality": "Whangārei", "addressRegion": "Northland", "addressCountry": "NZ"}
+}
+</script>
+<meta name="theme-color" content="#1F3D2B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1F3D2B;
+    --red: #C8323C;
+    --red-dark: #A82830;
+    --peach: #F2A07B;
+    --cream: #F6F1E7;
+    --white: #FFFDF9;
+    --ink: #1F2A23;
+    --muted: #4E5A52;
+    --line: #E3DACB;
+    --radius: 14px;
+    --wrap: 1080px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font: 400 1.0625rem/1.65 "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  h1, h2, h3 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--green);
+    margin: 0 0 .5em;
+  }
+  h1 { font-size: clamp(2.5rem, 7vw, 4.25rem); letter-spacing: -.01em; }
+  h2 { font-size: clamp(1.85rem, 4.5vw, 2.6rem); }
+  h3 { font-size: 1.4rem; }
+  p { margin: 0 0 1em; }
+  a { color: var(--red); }
+  img { max-width: 100%; display: block; }
+
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 20px; }
+  section { padding: 80px 0; }
+  .section-intro { max-width: 620px; color: var(--muted); margin-bottom: 40px; }
+
+  .skip { position: absolute; left: -9999px; }
+  .skip:focus { left: 16px; top: 16px; background: var(--white); padding: 8px 14px; z-index: 10; border-radius: 6px; }
+  :focus-visible { outline: 3px solid var(--peach); outline-offset: 3px; }
+
+  /* Header */
+  .site-header { background: var(--green); color: var(--cream); }
+  .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; padding-bottom: 18px; }
+  .brand { font-family: "Fraunces", Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--cream); text-decoration: none; }
+  .header-link { color: var(--cream); font-weight: 500; font-size: .95rem; text-decoration: none; border-bottom: 1px solid var(--peach); padding-bottom: 2px; }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    background: var(--red);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 999px;
+    transition: background-color .15s ease;
+  }
+  .btn:hover { background: var(--red-dark); }
+
+  /* Hero */
+  .hero { background: var(--green); color: var(--cream); padding: 72px 0 96px; }
+  .hero h1 { color: var(--cream); max-width: 12ch; }
+  .hero p { font-size: clamp(1.1rem, 2.4vw, 1.3rem); max-width: 34em; color: #E6E0D2; margin-bottom: 32px; }
+  .hero-rule { width: 64px; height: 4px; background: var(--peach); border-radius: 2px; margin-bottom: 28px; }
+
+  .strip { background: var(--peach); color: var(--green); text-align: center; font-weight: 600; padding: 14px 20px; font-size: 1rem; }
+
+  /* Box cards */
+  .cards { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .card.featured { border: 2px solid var(--red); }
+  .badge {
+    position: absolute; top: 14px; right: 14px; z-index: 2;
+    background: var(--red); color: #fff;
+    font-size: .8rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+    padding: 6px 12px; border-radius: 999px;
+  }
+  /* Image slot: shows a placeholder until the photo file exists */
+  .card-media {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .card-media .placeholder {
+    text-align: center; color: var(--muted); font-size: .9rem;
+    border: 1.5px dashed #CDBFA8; border-radius: 10px;
+    padding: 18px 22px; margin: 24px;
+  }
+  .card-media .placeholder strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.15rem; color: var(--green); font-weight: 500; }
+  .card-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+  .card-body { padding: 26px 26px 28px; display: flex; flex-direction: column; flex: 1; }
+  .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+  .card-head h3 { margin: 0; }
+  .price { font-family: "Fraunces", Georgia, serif; font-size: 1.6rem; font-weight: 600; color: var(--red); white-space: nowrap; }
+  .price small { font-family: "Inter", sans-serif; font-size: .8rem; color: var(--muted); font-weight: 400; }
+  .card ul { list-style: none; padding: 0; margin: 0 0 20px; }
+  .card li { padding: 7px 0 7px 22px; position: relative; border-top: 1px solid #EFE8DB; font-size: .98rem; }
+  .card li:first-child { border-top: 0; }
+  .card li::before { content: ""; position: absolute; left: 2px; top: 16px; width: 8px; height: 8px; border-radius: 50%; background: var(--peach); }
+  .card li.includes { font-weight: 600; color: var(--green); }
+  .best { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); color: var(--green); font-size: .95rem; margin-bottom: 0; }
+  .best span { font-weight: 600; }
+  .note { text-align: center; margin: 40px auto 0; font-size: 1.1rem; color: var(--green); }
+  .note a { font-weight: 600; }
+
+  /* How it works */
+  .how { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); counter-reset: step; }
+  .steps li { counter-increment: step; }
+  .steps li::before {
+    content: counter(step);
+    display: flex; align-items: center; justify-content: center;
+    width: 48px; height: 48px; border-radius: 50%;
+    background: var(--green); color: var(--cream);
+    font-family: "Fraunces", Georgia, serif; font-size: 1.3rem; font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .steps h3 { font-size: 1.2rem; margin-bottom: .3em; }
+  .steps p { color: var(--muted); font-size: .97rem; margin: 0; }
+
+  /* Extras */
+  .extras { list-style: none; padding: 0; margin: 0; max-width: 720px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); }
+  .extras li { display: flex; justify-content: space-between; gap: 20px; padding: 18px 24px; border-top: 1px solid var(--line); }
+  .extras li:first-child { border-top: 0; }
+  .extras .cost { font-weight: 600; color: var(--red); white-space: nowrap; text-align: right; }
+
+  /* Story */
+  .story { background: var(--green); color: var(--cream); }
+  .story h2 { color: var(--cream); }
+  .story .wrap { max-width: 760px; }
+  .story p { font-size: 1.12rem; line-height: 1.75; color: #E6E0D2; }
+  .story .sign { font-family: "Fraunces", Georgia, serif; font-size: 1.5rem; color: var(--peach); margin-top: 24px; }
+
+  /* Final CTA */
+  .cta { text-align: center; }
+  .cta h2 { margin-bottom: .4em; }
+  .cta p { color: var(--muted); margin-bottom: 30px; }
+
+  footer { background: var(--green); color: #D9D3C4; padding: 40px 0; font-size: .95rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; }
+  footer .brand { font-size: 1.15rem; }
+  footer a { color: var(--peach); }
+
+  /* Preview banner */
+  .preview { background: #FFF4D6; color: #4A3A10; border-bottom: 1px solid #E8D9A8; font-size: .92rem; }
+  .preview .wrap { padding-top: 10px; padding-bottom: 10px; }
+  .preview summary { cursor: pointer; font-weight: 600; }
+  .preview ul { margin: 8px 0 4px; padding-left: 20px; }
+  .tag { display: inline-block; font-size: .72rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; background: #FFF4D6; color: #6B5414; border: 1px solid #E8D9A8; padding: 2px 8px; border-radius: 999px; margin-bottom: 12px; }
+
+  /* Header nav */
+  .nav { display: flex; gap: 22px; align-items: center; }
+  .nav a { color: var(--cream); text-decoration: none; font-size: .95rem; font-weight: 500; }
+  .nav a:hover { color: var(--peach); }
+
+  /* Quote form */
+  .quote { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .quote-grid { display: grid; gap: 40px; grid-template-columns: 1fr 1.4fr; align-items: start; }
+  .quote-aside p { color: var(--muted); }
+  .quote-aside .alt { font-size: .95rem; }
+  form { display: grid; gap: 18px; grid-template-columns: 1fr 1fr; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field.full { grid-column: 1 / -1; }
+  label, legend { font-weight: 600; font-size: .95rem; color: var(--green); }
+  .hint { font-weight: 400; color: var(--muted); font-size: .85rem; }
+  input, select, textarea {
+    font: inherit; color: var(--ink); background: #fff;
+    border: 1.5px solid #CFC4B2; border-radius: 10px; padding: 12px 14px; width: 100%;
+  }
+  input:focus, select:focus, textarea:focus { border-color: var(--green); outline: 3px solid rgba(242,160,123,.6); outline-offset: 1px; }
+  textarea { min-height: 110px; resize: vertical; }
+  form .btn { border: 0; cursor: pointer; justify-self: start; font-family: inherit; }
+  .form-status { grid-column: 1 / -1; margin: 0; font-weight: 500; }
+  .form-status.ok { color: var(--green); }
+  .form-status.err { color: var(--red); }
+  .hp { position: absolute; left: -9999px; }
+
+  /* FAQ */
+  .faq { max-width: 760px; }
+  .faq details { background: var(--white); border: 1px solid var(--line); border-radius: 12px; margin-bottom: 12px; }
+  .faq summary { cursor: pointer; padding: 18px 22px; font-weight: 600; color: var(--green); list-style: none; position: relative; padding-right: 52px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 22px; top: 50%; transform: translateY(-50%); font-size: 1.4rem; color: var(--red); font-weight: 400; }
+  .faq details[open] summary::after { content: "\2212"; }
+  .faq .answer { padding: 0 22px 18px; color: var(--muted); }
+  .faq .answer p:last-child { margin-bottom: 0; }
+
+  /* Customer quotes */
+  .quotes { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .quotes figure { margin: 0; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; }
+  .quotes blockquote { margin: 0 0 18px; font-family: "Fraunces", Georgia, serif; font-size: 1.2rem; line-height: 1.45; color: var(--green); }
+  .quotes figcaption { margin-top: auto; color: var(--muted); font-size: .92rem; }
+  .quotes figcaption strong { color: var(--ink); display: block; }
+
+  /* Booked-out state */
+  .closed-only { display: none; }
+  body.orders-closed .closed-only { display: block; }
+  body.orders-closed .open-only { display: none; }
+  .strip.closed-only { background: var(--green); color: var(--cream); border-top: 1px solid #2E5640; }
+
+  @media (max-width: 860px) {
+    .quote-grid { grid-template-columns: 1fr; gap: 24px; }
+    .nav a:not(.header-link) { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    form { grid-template-columns: 1fr; }
+    section { padding: 60px 0; }
+    .hero { padding: 52px 0 72px; }
+    .btn { display: block; text-align: center; }
+    .extras li { flex-direction: column; gap: 2px; }
+    .extras .cost { text-align: left; }
+    .header-link { display: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- PREVIEW BANNER: delete this whole block if this page becomes the real homepage -->
+<div class="preview" role="note">
+  <div class="wrap">
+    <details>
+      <summary>Ideas preview for Stella. Customer quotes and FAQ answers are examples, not real. Tap to see what&rsquo;s new.</summary>
+      <ul>
+        <li><strong>Quote form</strong> instead of an email link, so it works for everyone, even people with no email app set up.</li>
+        <li><strong>FAQ</strong> answering what business buyers ask before ordering (example answers: Stella to check).</li>
+        <li><strong>Customer quotes</strong> section, ready for real quotes after the first orders.</li>
+        <li><strong>Sharing preview</strong>: a picture and title when the link is pasted into LinkedIn, Facebook or Teams.</li>
+        <li><strong>Google details</strong>: a better page title and description, and business info Google can read.</li>
+        <li><strong>Booked-out switch</strong>: one setting at the top to close orders, and it closes them by itself after 4 December.</li>
+        <li><strong>Menu</strong> in the header to jump to each section.</li>
+      </ul>
+      <p style="margin:0">Still to do outside the website: real box photos, a web address like stellasgifts.co.nz, and a free Google Business Profile.</p>
+    </details>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" data-business-name>[BUSINESS NAME]</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#boxes">Boxes</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a class="header-link" href="#quote">Get a quote</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 1. HERO -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-rule" aria-hidden="true"></div>
+      <h1 id="hero-title">Christmas gifts, sorted.</h1>
+      <p>Gift boxes for your clients and your team, chosen, packed and delivered for you. You tell us how many. We do the rest.</p>
+      <a class="btn" href="#quote">Get a quote</a>
+    </div>
+  </section>
+  <div class="strip open-only">Order by Friday 4 December &middot; Delivered 14&ndash;18 December</div>
+  <div class="strip closed-only">Orders for this Christmas are now closed. Thank you for a wonderful season. Email us to get on next year&rsquo;s list.</div>
+
+  <!-- 2. THE BOXES -->
+  <section id="boxes" aria-labelledby="boxes-title">
+    <div class="wrap">
+      <h2 id="boxes-title">The boxes</h2>
+      <p class="section-intro">Three boxes, filled with Northland and NZ-made treats wherever we can. Prices are per box.</p>
+
+      <div class="cards">
+        <!-- Box 1. PHOTO: put the photo at images/thank-you.jpg -->
+        <article class="card">
+          <div class="card-media">
+            <div class="placeholder" aria-hidden="true"><strong>The Thank You</strong>Photo coming soon</div>
+            <img src="images/thank-you.jpg" alt="The Thank You gift box with shortbread, coffee, chocolate and candy canes" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3>The Thank You</h3>
+              <span class="price">$55</span>
+            </div>
+            <ul>
+              <li>Christmas shortbread from a local bakery</li>
+              <li>Northland-roasted coffee or loose-leaf tea</li>
+              <li>Quality chocolate</li>
+              <li>Candy canes</li>
+              <li>Printed card with your message</li>
+            </ul>
+            <p class="best"><span>Best for</span> teams and suppliers</p>
+          </div>
+        </article>
+
+        <!-- Box 2. PHOTO: put the photo at images/good-year.jpg -->
+        <article class="card featured">
+          <span class="badge">Most popular</span>
+          <div class="card-media">
+            <div class="placeholder" aria-hidden="true"><strong>The Good Year</strong>Photo coming soon</div>
+            <img src="images/good-year.jpg" alt="The Good Year gift box with honey, chutney, crackers and a soy candle" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3>The Good Year</h3>
+              <span class="price">$95</span>
+            </div>
+            <ul>
+              <li class="includes">Everything in The Thank You, plus:</li>
+              <li>Northland honey</li>
+              <li>Small-batch chutney or relish</li>
+              <li>Gourmet crackers</li>
+              <li>Hand-poured soy candle</li>
+            </ul>
+            <p class="best"><span>Best for</span> key clients and managers</p>
+          </div>
+        </article>
+
+        <!-- Box 3. PHOTO: put the photo at images/big-cheers.jpg -->
+        <article class="card">
+          <div class="card-media">
+            <div class="placeholder" aria-hidden="true"><strong>The Big Cheers</strong>Photo coming soon</div>
+            <img src="images/big-cheers.jpg" alt="The Big Cheers keepsake gift box with mānuka honey, hand cream and a wooden serving board" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3>The Big Cheers</h3>
+              <span class="price">$150</span>
+            </div>
+            <ul>
+              <li class="includes">Everything in The Good Year, plus:</li>
+              <li>Premium mānuka honey</li>
+              <li>NZ-made hand cream</li>
+              <li>Wooden serving board</li>
+              <li>Rigid keepsake gift box</li>
+            </ul>
+            <p class="best"><span>Best for</span> top clients</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="note">Any budget? Just <a href="#quote">tell us</a> and we&rsquo;ll build a box to match.</p>
+    </div>
+  </section>
+
+  <!-- 3. HOW IT WORKS -->
+  <section class="how" id="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <h2 id="how-title">How it works</h2>
+      <p class="section-intro">Four steps, and only the first one needs you.</p>
+      <ol class="steps">
+        <li><h3>Tell us how many</h3><p>Send us the number of people and your budget per person.</p></li>
+        <li><h3>Approve your card</h3><p>We send you the card with your message to check. Adding your logo is optional.</p></li>
+        <li><h3>We pack every box</h3><p>Every box is packed by hand, with care.</p></li>
+        <li><h3>Delivered before Christmas</h3><p>Your boxes arrive before Christmas, with one invoice for everything.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 4. EXTRAS -->
+  <section aria-labelledby="extras-title">
+    <div class="wrap">
+      <h2 id="extras-title">Extras</h2>
+      <p class="section-intro">Make it a little more personal.</p>
+      <ul class="extras">
+        <li><span>Each box named for the person</span><span class="cost">Free</span></li>
+        <li><span>Logo seal on every box</span><span class="cost">+$3 per box</span></li>
+        <li><span>Branded gift bags</span><span class="cost">Price on request</span></li>
+        <li><span>Delivery to each person</span><span class="cost">From $12</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5. OUR STORY -->
+  <section class="story" aria-labelledby="story-title">
+    <div class="wrap">
+      <h2 id="story-title">Our story</h2>
+      <p>Hi, I&rsquo;m Stella. I&rsquo;m 12, and I&rsquo;ve always wanted my own business. I grew up around a family business, watching how hard everyone works and how much they care about their customers.</p>
+      <p>Every December I noticed the same thing: busy people wanting to say thank you to their team, but never having the time to sort the gifts. So that&rsquo;s what I do. You tell me how many people and your budget, and I take care of the rest. I use Northland and NZ-made treats wherever I can.</p>
+      <p>I&rsquo;m not the cheapest, and I&rsquo;m not trying to be. I work hard, I answer my emails, and I&rsquo;ll make sure every box is something your team is happy to get.</p>
+      <p class="sign">Stella</p>
+    </div>
+  </section>
+
+  <!-- 6. CUSTOMER QUOTES: replace the examples with real ones (with permission) after the first orders -->
+  <section aria-labelledby="kind-title">
+    <div class="wrap">
+      <span class="tag">Examples only</span>
+      <h2 id="kind-title">What customers say</h2>
+      <p class="section-intro">Placeholder quotes to show the idea. Swap in real ones once customers have their boxes.</p>
+      <div class="quotes">
+        <figure>
+          <blockquote>&ldquo;One email and our whole team was sorted. The boxes looked beautiful and everyone loved the local treats.&rdquo;</blockquote>
+          <figcaption><strong>Example name</strong>Office manager, example company</figcaption>
+        </figure>
+        <figure>
+          <blockquote>&ldquo;Our clients still mention the honey. It felt personal, not like another bottle of wine.&rdquo;</blockquote>
+          <figcaption><strong>Example name</strong>Director, example company</figcaption>
+        </figure>
+        <figure>
+          <blockquote>&ldquo;Delivered on time, one invoice, and every box had the person&rsquo;s name on it. Easy.&rdquo;</blockquote>
+          <figcaption><strong>Example name</strong>Team leader, example company</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FAQ: example answers, Stella to check every one -->
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <span class="tag">Example answers</span>
+      <h2 id="faq-title">Questions</h2>
+      <p class="section-intro">The things people usually want to know before ordering.</p>
+      <div class="faq">
+        <details>
+          <summary>Is there a minimum order?</summary>
+          <div class="answer"><p>Five boxes. For fewer, just ask and we&rsquo;ll see what we can do.</p></div>
+        </details>
+        <details>
+          <summary>Can you cater for dietary needs?</summary>
+          <div class="answer"><p>Yes. Tell us about gluten-free, dairy-free, vegan, nut allergies or no-alcohol preferences when you ask for a quote, and we&rsquo;ll swap items so those people get a box that&rsquo;s just as good. Our boxes don&rsquo;t include alcohol.</p></div>
+        </details>
+        <details>
+          <summary>Can we add our logo or our own message?</summary>
+          <div class="answer"><p>Yes. Every box comes with a printed card with your message, and we send it to you to approve first. A logo seal on every box is $3 per box.</p></div>
+        </details>
+        <details>
+          <summary>How do we pay?</summary>
+          <div class="answer"><p>You get one invoice for the whole order, paid by bank transfer. We ask for 50% when you confirm and the rest on delivery.</p></div>
+        </details>
+        <details>
+          <summary>Do your prices include GST?</summary>
+          <div class="answer"><p>Prices are per box. We are not GST registered, so there is no GST to add.</p></div>
+        </details>
+        <details>
+          <summary>Where do you deliver?</summary>
+          <div class="answer"><p>We deliver to your workplace in and around Whangārei. We can also courier boxes to each person anywhere in New Zealand, from $12 per address.</p></div>
+        </details>
+        <details>
+          <summary>What if we miss the 4 December deadline?</summary>
+          <div class="answer"><p>Get in touch anyway. If we have room, we&rsquo;ll fit you in.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. QUOTE FORM -->
+  <section class="quote" id="quote" aria-labelledby="quote-title">
+    <div class="wrap quote-grid">
+      <div class="quote-aside">
+        <h2 id="quote-title">Get a quote</h2>
+        <p class="open-only">Tell us a little about your order and we&rsquo;ll reply within one working day with a quote.</p>
+        <p class="closed-only">Orders for this Christmas are closed. Leave your details and we&rsquo;ll get in touch next year before the rush.</p>
+        <p class="alt">Rather email? Write to <a class="quote-link" href="mailto:Stellasgifts.nz@gmail.com">Stellasgifts.nz@gmail.com</a></p>
+      </div>
+      <form id="quote-form" novalidate>
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-company">Company</label>
+          <input id="f-company" name="company" autocomplete="organization" required>
+        </div>
+        <div class="field full">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="f-people">Number of people</label>
+          <input id="f-people" name="people" type="number" min="1" inputmode="numeric" required>
+        </div>
+        <div class="field">
+          <label for="f-box">Box or budget</label>
+          <select id="f-box" name="box">
+            <option>The Thank You ($55)</option>
+            <option selected>The Good Year ($95)</option>
+            <option>The Big Cheers ($150)</option>
+            <option>A mix of boxes</option>
+            <option>A custom budget</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="f-delivery">Delivery</label>
+          <select id="f-delivery" name="delivery">
+            <option>All boxes to one workplace</option>
+            <option>To each person (from $12 each)</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="f-notes">Anything else? <span class="hint">Dietary needs, logo, budget per person, the date you need them</span></label>
+          <textarea id="f-notes" name="notes"></textarea>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="f-hp">Leave this empty</label><input id="f-hp" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+        <button class="btn" type="submit">Send my quote request</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- 9. FINAL CALL TO ACTION -->
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="wrap">
+      <h2 id="cta-title">Let&rsquo;s get your Christmas sorted.</h2>
+      <p class="open-only">Order by Friday 4 December for delivery 14&ndash;18 December.</p>
+      <p class="closed-only">Orders for this Christmas are closed. See you next year.</p>
+      <a class="btn" href="#quote">Get a quote</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand" data-business-name>[BUSINESS NAME]</div>
+      <div>Whangārei, Northland</div>
+    </div>
+    <div><a href="mailto:Stellasgifts.nz@gmail.com">Stellasgifts.nz@gmail.com</a></div>
+  </div>
+</footer>
+
+<script>
+  // Fills in the business name everywhere.
+  (function () {
+    var name = window.BUSINESS_NAME;
+    document.querySelectorAll("[data-business-name]").forEach(function (el) { el.textContent = name; });
+    document.title = name + " | Corporate Christmas gift boxes, Whangārei";
+
+    // Booked-out switch
+    var closed = window.ORDERS_CLOSED || (window.ORDER_DEADLINE && new Date() > new Date(window.ORDER_DEADLINE));
+    if (closed) document.body.classList.add("orders-closed");
+
+    // Quote form
+    var form = document.getElementById("quote-form");
+    var status = document.getElementById("form-status");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      status.className = "form-status";
+      var first = null;
+      form.querySelectorAll("[required]").forEach(function (el) {
+        var ok = el.checkValidity();
+        el.setAttribute("aria-invalid", ok ? "false" : "true");
+        if (!ok && !first) first = el;
+      });
+      if (first) {
+        status.textContent = "Please fill in your name, company, email and number of people.";
+        status.classList.add("err");
+        first.focus();
+        return;
+      }
+      var d = new FormData(form);
+      if (d.get("_gotcha")) return;
+      var lines = [
+        "Name: " + d.get("name"),
+        "Company: " + d.get("company"),
+        "Email: " + d.get("email"),
+        "Number of people: " + d.get("people"),
+        "Box or budget: " + d.get("box"),
+        "Delivery: " + d.get("delivery"),
+        "Notes: " + (d.get("notes") || "")
+      ];
+      if (!window.FORM_ENDPOINT) {
+        // No form service set up yet: open a ready-written email instead.
+        location.href = "mailto:Stellasgifts.nz@gmail.com?subject=" +
+          encodeURIComponent("Christmas gift quote: " + d.get("company")) +
+          "&body=" + encodeURIComponent("Hi Stella,\n\n" + lines.join("\n") + "\n\nThanks!");
+        status.textContent = "Your email app should open with everything filled in. Just press send.";
+        status.classList.add("ok");
+        return;
+      }
+      var btn = form.querySelector("button");
+      btn.disabled = true;
+      status.textContent = "Sending...";
+      d.append("_subject", "Christmas gift quote: " + d.get("company"));
+      fetch(window.FORM_ENDPOINT, { method: "POST", body: d, headers: { Accept: "application/json" } })
+        .then(function (r) {
+          if (!r.ok) throw new Error();
+          form.reset();
+          status.textContent = "Thank you! Your request is in. We'll reply within one working day.";
+          status.classList.add("ok");
+        })
+        .catch(function () {
+          status.textContent = "Sorry, that didn't send. Please email Stellasgifts.nz@gmail.com instead.";
+          status.classList.add("err");
+        })
+        .then(function () { btn.disabled = false; });
+    });
+  })();
+</script>
+</body>
+</html>
